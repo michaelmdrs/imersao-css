@@ -1,0 +1,43 @@
+/* Aula inicial :D */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+    background-image: url('https://images4.alphacoders.com/403/thumb-1920-4036.png');
+    background-size: auto 100vh;
+    font-family: Verdana;
+    height: 100vh;
+  }
+  
+  .menu {
+    background-color: white;
+    padding: 10px
+  }
+  .menu li {
+    list-style: none;
+  } 
+  .menu ul {
+    display: flex;
+    justify-content: space-around;
+  }
+  a {
+    color: teal;
+    text-decoration: none;
+  }
+  a:hover {
+    background: #B2F8FF;
+    transition: 0.3s;
+  }
+  
+  .site-title {
+    color: whitesmoke;
+    text-align: center;
+  }
+  
+  .site-subtitle {
+    color: whitesmoke;
+    text-align: center;
+  }
+  

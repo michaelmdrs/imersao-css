@@ -7,7 +7,7 @@
 body {
     background-image: url('https://images4.alphacoders.com/403/thumb-1920-4036.png');
     background-size: auto 100vh;
-    font-family: Verdana;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     height: 100vh;
     font-size: 12px;
   }
@@ -35,7 +35,7 @@ body {
   }
 
   header {
-    height: 50vh;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -89,3 +89,17 @@ body {
     height: 180px;
   }
   
+  /* Estilização do banner */
+  .banner-menu {
+    background-color: cornsilk;
+    height: 200px;
+    width: 100%;
+  }
+
+  .banner-texto {
+    display: block;
+    justify-content: center;
+    padding: 50px;
+    text-align: center;
+    top: 0;
+  }

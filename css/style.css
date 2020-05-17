@@ -8,13 +8,15 @@ body {
     background-image: url('https://images4.alphacoders.com/403/thumb-1920-4036.png');
     background-size: auto 100vh;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 14px;
     height: 100vh;
-    font-size: 12px;
   }
 
   /* Se a tela tiver pelo menos 400px vai carregar esses estilos */
   @media (min-width: 400px) {
     body {
+      background-color: #00b8c0;
+      background-image: none;
       font-size: 14px;
     }
   }
@@ -22,6 +24,7 @@ body {
   /* Breakpoint */
   @media (min-width: 600px) {
     body {
+      background-image: none;
       font-size: 18px;
     }
   }
@@ -29,7 +32,6 @@ body {
   @media (min-width: 1200px) {
     body {
       font-size: 24px;
-      background-image: none;
       background-color: coral;
     }
   }
@@ -40,7 +42,7 @@ body {
     justify-content: center;
     align-items: center;
   }
-  
+  /* Barra de Menu */
   .menu {
     background-color: white;
     position: fixed;
@@ -69,7 +71,7 @@ body {
     transition: 0.3s;
     color: #FFF;
   }
-  
+  /* Título e Subtítulo */
   .site-title {
     color: whitesmoke;
     text-align: center;
@@ -77,6 +79,7 @@ body {
 
   .site-title {
     font-size: 4em;
+    font-family: 'Ubuntu', sans-serif;
   }
   
   .site-subtitle {
@@ -84,22 +87,62 @@ body {
     text-align: center;
   }
 
+  .site-descricao {
+    font-family: 'Source Code Pro', monospace;
+    text-align: center;
+    line-height: 4em;
+  }
+/* Menu de Projeto */
+  .portfolio {
+    background-color: firebrick;
+    padding: 2em;
+  }
+
+  .portfolio .grid {
+    display: grid;
+    gap: 5em;
+  }
+
+  .portfolio figure {
+    text-align: center;
+    line-height: 2em;
+  }
+
+  .portfolio h2 {
+    color: cornsilk;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 2em;
+    margin-bottom: 2em;
+  }
+/* Regra de Resposividade para dimensionar imagens em tela menor*/
+  @media (min-width: 560px) {
+    .portfolio .grid {
+      grid-template-columns: 240px 240px;
+    }
+  }
+
+  @media (min-width: 880px) {
+    .portfolio .grid {
+      grid-template-columns: repeat(3, 240px);
+      align-content: center;
+      justify-content: center;
+      height: calc(100vh - 48px - 8em);
+    }
+  }
+
   .img-portfolio {
-    width: 180px;
-    height: 180px;
+    width: 300px;
+    height: 200px;
+    border-radius: 3%;
   }
   
   /* Estilização do banner */
   .banner-menu {
     background-color: cornsilk;
-    height: 200px;
-    width: 100%;
+    padding: 2em;
   }
 
   .banner-texto {
-    display: block;
-    justify-content: center;
-    padding: 50px;
     text-align: center;
-    top: 0;
+    line-height: 2em;
   }

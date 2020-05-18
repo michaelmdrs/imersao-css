@@ -32,7 +32,7 @@ body {
   @media (min-width: 1200px) {
     body {
       font-size: 24px;
-      background-color: coral;
+      background-color: #0a3d62;
     }
   }
 
@@ -66,10 +66,10 @@ body {
     color: teal;
     text-decoration: none;
   }
-  a:hover {
+  .menu a:hover {
     background: rgb(4, 84, 92);
-    transition: 0.3s;
     color: #FFF;
+    transition: 0.3s;
   }
   /* Título e Subtítulo */
   .site-title {
@@ -93,14 +93,14 @@ body {
     line-height: 4em;
   }
 /* Menu de Projeto */
-  .portfolio {
-    background-color: firebrick;
+  .contato, .portfolio {
+    min-height: 100vh;
     padding: 2em;
   }
 
   .portfolio .grid {
     display: grid;
-    gap: 5em;
+    gap: 4em;
   }
 
   .portfolio figure {
@@ -123,10 +123,10 @@ body {
 
   @media (min-width: 880px) {
     .portfolio .grid {
-      grid-template-columns: repeat(3, 240px);
+      grid-template-columns: repeat(2, 240px);
       align-content: center;
       justify-content: center;
-      height: calc(100vh - 48px - 8em);
+
     }
   }
 
@@ -135,7 +135,21 @@ body {
     height: 200px;
     border-radius: 3%;
   }
-  
+
+  .contato {
+    background-color: #0c2461;
+  }
+
+  .contato a {
+    color: whitesmoke;
+    font-size: 4em;
+    
+  }
+
+  .contato a:hover {
+    text-decoration: none;
+  }
+
   /* Estilização do banner */
   .banner-menu {
     background-color: cornsilk;
@@ -145,4 +159,11 @@ body {
   .banner-texto {
     text-align: center;
     line-height: 2em;
+  }
+
+  .rodape {
+    background-color: white;
+    font-size: 14px;
+    padding: 2em;
+    text-align: center;
   }

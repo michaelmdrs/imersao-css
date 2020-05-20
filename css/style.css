@@ -5,165 +5,234 @@
 }
 
 body {
-    background-image: url('https://images4.alphacoders.com/403/thumb-1920-4036.png');
-    background-size: auto 100vh;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  background-color: #211452;
+  background-size: auto 100vh;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 14px;
+  height: 100vh;
+}
+
+/* Telas responsivas 
+ * Se a tela do dispostivo tiver 400px
+ * vai carregar esses estilos
+**/
+@media (min-width: 400px) {
+  body {
+    background-color: #211452;
     font-size: 14px;
-    height: 100vh;
   }
+}
 
-  /* Se a tela tiver pelo menos 400px vai carregar esses estilos */
-  @media (min-width: 400px) {
-    body {
-      background-color: #00b8c0;
-      background-image: none;
-      font-size: 14px;
-    }
+/* Breakpoint */
+@media (min-width: 600px) {
+  body {
+    background-color: #211452;
+    font-size: 18px;
   }
+}
 
-  /* Breakpoint */
-  @media (min-width: 600px) {
-    body {
-      background-image: none;
-      font-size: 18px;
-    }
+@media (min-width: 1200px) {
+  body {
+    background-color: ##211452;
+    font-size: 20;
   }
+}
 
-  @media (min-width: 1200px) {
-    body {
-      font-size: 24px;
-      background-color: #0a3d62;
-    }
-  }
+/* Cabeçalho da Página */
+header {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-  header {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  /* Barra de Menu */
-  .menu {
-    background-color: white;
-    position: fixed;
-    width: 100vw;
-    top: 0;
-  }
-  .menu li {
-    list-style: none;
-  } 
-  .menu ul {
-    display: flex;
-    justify-content: space-around;
-  }
+/* Barra de Navegação | Menu */
 
-  .menu a {
-    display: block;
-    padding: 10px;
-  }
+.menu {
+  background-color: #F15922;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 1;
+}
 
-  a {
-    color: teal;
-    text-decoration: none;
-  }
-  .menu a:hover {
-    background: rgb(4, 84, 92);
-    color: #FFF;
-    transition: 0.3s;
-  }
-  /* Título e Subtítulo */
-  .site-title {
-    color: whitesmoke;
-    text-align: center;
-  }
+.menu li {
+  list-style: none;
+}
 
-  .site-title {
-    font-size: 4em;
-    font-family: 'Ubuntu', sans-serif;
-  }
-  
-  .site-subtitle {
-    color: whitesmoke;
-    text-align: center;
-  }
+.menu ul {
+  display: flex;
+  justify-content: space-evenly;
+}
 
-  .site-descricao {
-    font-family: 'Source Code Pro', monospace;
-    text-align: center;
-    line-height: 4em;
-  }
-/* Menu de Projeto */
-  .contato, .portfolio {
-    min-height: 100vh;
-    padding: 2em;
-  }
+.menu a {
+  display: block;
+  padding: 10px 20px;
+  transition: background-color 0.5s, color 0.3s;
+}
 
+.menu a:hover {
+  color: #F8E000;
+  background-color: #211452;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.
+
+/* Animação Título */
+.title, 
+.site-title,
+.site-subtitle {
+  animation: 1s ease 500ms titleAnimation forwards;
+  opacity: 0;
+  transform: scale(0.2) translateY(50vh);
+}
+
+@keyframes titleAnimation {
+  from {
+    transform: scale(0.2) translateY(50vh);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Título  e Subtítulo */
+.site-subtitle,
+.site-title {
+  color: whitesmoke;
+  text-align: center;
+}
+
+.site-title {
+  font-size: 4em;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.site-subtitle {
+  font-family: ;
+  font-style: italic;
+  line-height: 1.4em;
+}
+
+/* Estilização das Páginas */
+.sobre,
+.contato,
+.portfolio {
+  padding: 2em;
+  min-height: 100vh;
+}
+
+/* Telas responsivas 
+ * Se a tela do dispostivo tiver 400px
+ * vai carregar esses estilos
+**/
+
+@media (min-width: 1500px) {
+  .container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px;
+  }
+}
+
+/* Páginas */
+.sobre h2,
+.contato h2,
+.portfolio h2 {
+  color: whitesmoke;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 2em;
+  margin: 1.5em;
+}
+
+.sobre {
+  background-color: #F15922;
+}
+
+.sobre p {
+  color: #FFFFFF;
+  font-family: 'Source Code Pro', monospace;;
+  margin-bottom: 1.4em;
+  text-align: justify;
+  text-indent: 1.5em;
+}
+
+.sobre a {
+  color: #0d0047;
+  text-decoration: underline;
+}
+
+.sobre a:hover {
+  color: #F8E000;
+  background-color: #0d0047;
+}
+
+/* Foto de Perfil */
+
+/* Portfolio Galeria de Imagens*/
+.portfolio .grid {
+  display: grid;
+  gap: 4em;
+}
+
+.portfolio figure {
+  text-align: center;
+  line-height: 2em;
+}
+
+.portfolio h3{
+  color: whitesmoke;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 1em;
+  margin-bottom: 2em;
+}
+
+@media (min-width: 560px) {
   .portfolio .grid {
-    display: grid;
-    gap: 4em;
+    grid-template-columns: 240px 240px;
   }
+}
 
-  .portfolio figure {
-    text-align: center;
-    line-height: 2em;
+@media (min-width: 880px) {
+  .portfolio .grid {
+    grid-template-columns: repeat(2, 260px);
+    align-content: center;
+    justify-content: center;
+    height: calc(100vh - 8em - 48px);
   }
+}
 
-  .portfolio h2 {
-    color: cornsilk;
-    font-family: 'Ubuntu', sans-serif;
-    font-size: 2em;
-    margin-bottom: 2em;
-  }
-/* Regra de Resposividade para dimensionar imagens em tela menor*/
-  @media (min-width: 560px) {
-    .portfolio .grid {
-      grid-template-columns: 240px 240px;
-    }
-  }
+.img-portfolio {
+  border-radius: 10px;
+  height: 200px;
+  object-fit: cover;
+  object-position: left bottom;
+  transition: transform 500ms;
+  width: 300px;
+}
 
-  @media (min-width: 880px) {
-    .portfolio .grid {
-      grid-template-columns: repeat(2, 240px);
-      align-content: center;
-      justify-content: center;
+.img-portfolio:hover {
+  transform: scale(1.1) rotate(2deg);
+}
 
-    }
-  }
+.contato .icons {
+  text-align: center;
+}
 
-  .img-portfolio {
-    width: 300px;
-    height: 200px;
-    border-radius: 3%;
-  }
-
-  .contato {
-    background-color: #0c2461;
-  }
-
-  .contato a {
-    color: whitesmoke;
-    font-size: 4em;
-    
-  }
-
-  .contato a:hover {
-    text-decoration: none;
-  }
-
-  /* Estilização do banner */
-  .banner-menu {
-    background-color: cornsilk;
-    padding: 2em;
-  }
-
-  .banner-texto {
-    text-align: center;
-    line-height: 2em;
-  }
-
-  .rodape {
-    background-color: white;
-    font-size: 14px;
-    padding: 2em;
-    text-align: center;
-  }
+.contato a {
+  color: whitesmoke;
+  font-size: 4em;
+  transition: text-shadow 0.3s;
+}
+.contato a:active, /*Sempre lembrar da vírgula quando passar mais de um valor... =) */
+.contato a:hover {
+  text-decoration: none;
+  text-shadow: 0px 0px 10px whitesmoke;
+}

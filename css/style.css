@@ -5,11 +5,11 @@
 }
 
 body {
-  background-color: #211452;
-  background-size: auto 100vh;
+  background-image: url('../img/header-home.jpg');
+  background-repeat: no-repeat;
+  background-size: auto 100vw;
   font-family: 'Ubuntu', sans-serif;
   font-size: 14px;
-  height: 100vh;
 }
 
 /* Telas responsivas 
@@ -34,7 +34,7 @@ body {
 @media (min-width: 1200px) {
   body {
     background-color: ##211452;
-    font-size: 20;
+    font-size: 18px;
   }
 }
 
@@ -50,6 +50,7 @@ header {
 
 .menu {
   background-color: #F15922;
+  box-shadow: 0px 0px 10px black;
   position: fixed;
   top: 0;
   width: 100vw;
@@ -80,28 +81,10 @@ a {
   color: white;
   text-decoration: none;
 }
-
-.
+/* Fim Barra de Navegação */
 
 /* Animação Título */
-.title, 
-.site-title,
-.site-subtitle {
-  animation: 1s ease 500ms titleAnimation forwards;
-  opacity: 0;
-  transform: scale(0.2) translateY(50vh);
-}
 
-@keyframes titleAnimation {
-  from {
-    transform: scale(0.2) translateY(50vh);
-    opacity: 0;
-  }
-  to {
-    transform: scale(1) translateY(0);
-    opacity: 1;
-  }
-}
 
 /* Título  e Subtítulo */
 .site-subtitle,
@@ -116,10 +99,13 @@ a {
 }
 
 .site-subtitle {
+  border-bottom: 2px solid rgba(red, green, blue, alpha)
   font-family: ;
   font-style: italic;
   line-height: 1.4em;
 }
+
+
 
 /* Estilização das Páginas */
 .sobre,
@@ -135,7 +121,7 @@ a {
 **/
 
 @media (min-width: 1500px) {
-  .container {
+ .container {
     margin-left: auto;
     margin-right: auto;
     max-width: 1200px;
@@ -153,7 +139,15 @@ a {
 }
 
 .sobre {
-  background-color: #F15922;
+  /*background-color: #F15922;*/
+  background-color: rgba(7, 7, 7);
+}
+
+.sobre p {
+  color: whitesmoke;
+  margin-bottom: 1.4em;
+  text-indent: 1.4em;
+  text-align: justify;
 }
 
 .sobre p {
@@ -165,16 +159,25 @@ a {
 }
 
 .sobre a {
-  color: #0d0047;
+  color: #F15922;
   text-decoration: underline;
 }
 
 .sobre a:hover {
   color: #F8E000;
+  text-decoration: none;
   background-color: #0d0047;
 }
 
 /* Foto de Perfil */
+.sobre .avatar img {
+  clip-path: polygon(100% 0%, 86% 48%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
+}
+
+.sobre .avatar {
+  float: right;
+  margin-left: 2em;
+}
 
 /* Portfolio Galeria de Imagens*/
 .portfolio .grid {
@@ -222,6 +225,14 @@ a {
   transform: scale(1.1) rotate(2deg);
 }
 
+.portfolio {
+  background-color: #0d0047;
+}
+
+.contato {
+  background-color: #F15922;
+}
+
 .contato .icons {
   text-align: center;
 }
@@ -235,4 +246,21 @@ a {
 .contato a:hover {
   text-decoration: none;
   text-shadow: 0px 0px 10px whitesmoke;
+}
+
+/* Rodape */
+
+.rodape  {
+  padding: 10px;
+  text-align: center;
+}
+
+.txtinformacao {
+  color: #FFF;
+}
+
+.txtrodape {
+  color: dimgrey;
+  font-size: 12px;
+  line-height: 2em;
 }

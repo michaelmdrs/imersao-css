@@ -5,6 +5,7 @@
 }
 
 body {
+  background-attachment: fixed;
   background-image: url('../img/header-home.jpg');
   background-repeat: no-repeat;
   background-size: auto 100vw;
@@ -84,12 +85,27 @@ a {
 /* Fim Barra de Navegação */
 
 /* Animação Título */
+.title {
+  animation: 1s ease-in 500ms tituloAnimacao forwards;
+  transform: scale(0.2) translateY(50vh);
+  opacity: 0;
+}
 
+@keyframes tituloAnimacao {
+  from {
+  transform: scale(0.2) translateY(50vh);
+  opacity: 0;
+  }
+  to {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+} /* Fim animação */
 
 /* Título  e Subtítulo */
 .site-subtitle,
 .site-title {
-  color: whitesmoke;
+  color: black;
   text-align: center;
 }
 
@@ -182,7 +198,7 @@ a {
 /* Portfolio Galeria de Imagens*/
 .portfolio .grid {
   display: grid;
-  gap: 4em;
+  gap: 3em;
 }
 
 .portfolio figure {
@@ -218,11 +234,11 @@ a {
   object-fit: cover;
   object-position: left bottom;
   transition: transform 500ms;
-  width: 300px;
+  width: 280px;
 }
 
 .img-portfolio:hover {
-  transform: scale(1.1) rotate(2deg);
+  transform: scale(1.1) rotate(0);
 }
 
 .portfolio {
@@ -257,6 +273,10 @@ a {
 
 .txtinformacao {
   color: #FFF;
+}
+
+.rodape {
+  background-color: #0d0047;
 }
 
 .txtrodape {
